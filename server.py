@@ -29,7 +29,7 @@ while True:
         print("Chat finalizado!")
         break
 
-    msg = raw_input("Servidor: ").strip()
+    msg = raw_input("Mensagem: ").strip()
     send_data_size = len(msg)
     connection.sendall(str(send_data_size).zfill(4).encode())
     connection.sendall(msg.encode())

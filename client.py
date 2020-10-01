@@ -16,7 +16,7 @@ while True:
         print("Chat finalizado!")
         break
         
-    msg = raw_input("Cliente: ").strip()
+    msg = raw_input("Mensagem: ").strip()
     send_data_size = len(msg)
     sock.sendall(str(send_data_size).zfill(4).encode())
     sock.sendall(msg.encode())
